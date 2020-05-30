@@ -1,4 +1,4 @@
-package all;
+package com.java8;
 
 interface DemoInterface {
 	

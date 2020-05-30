@@ -1,4 +1,4 @@
-package all;
+package com.java8;
 
 import java.io.BufferedReader;
 import java.nio.file.Files;

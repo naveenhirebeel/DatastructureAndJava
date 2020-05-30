@@ -1,4 +1,4 @@
-package all;
+package com.java8;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
