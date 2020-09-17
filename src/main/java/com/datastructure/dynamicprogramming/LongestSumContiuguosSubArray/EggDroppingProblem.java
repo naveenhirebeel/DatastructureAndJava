@@ -3,7 +3,7 @@ package com.datastructure.dynamicprogramming.LongestSumContiuguosSubArray;
 public class EggDroppingProblem {
 
 	public static void main(String[] args) {
-		new EggDroppingProblem().solveEggDrop(8, 4);
+		 new EggDroppingProblem().solveEggDrop(8, 4);
 	}
 
 	private void solveEggDrop(int floors, int eggs){

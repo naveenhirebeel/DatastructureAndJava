@@ -18,7 +18,7 @@ public class BinaryTree
 	{
 		int h = height(root);
 		int i;
-		for (i=1; i<=h; i++) {
+		for (i=0; i<=h; i++) {
 			printGivenLevel(root, i);
 			System.out.println();
 		}
@@ -30,7 +30,7 @@ public class BinaryTree
 	int height(Node root)
 	{
 		if (root == null)
-		return 0;
+		return -1;
 		else
 		{
 			/* compute height of each subtree */
@@ -49,9 +49,9 @@ public class BinaryTree
 	{
 		if (root == null)
 			return;
-		if (level == 1)
+		if (level == 0)
 			System.out.print(root.data + " ");
-		else if (level > 1)
+		else if (level > 0)
 		{
 			printGivenLevel(root.left, level-1);
 			printGivenLevel(root.right, level-1);

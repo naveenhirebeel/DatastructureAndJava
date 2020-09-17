@@ -1,7 +1,7 @@
 package com.datastructure.backtracking;
 
 import java.util.Scanner;
-//DID NOT UNDERSTANDDDDDDDDDDDDDDDDDDDDD YETTTTTTTTTTTTTTTTTTTTT
+//DID NOT UNDERSTANDDDDDDDDDDDDDDDDDDDDD YETTTTTTTTTTTTTTTTTTTTT - Understood now
 public class SumOfSubsets {
 
 	int[] w;
@@ -16,11 +16,11 @@ public class SumOfSubsets {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Enter the number of elements:");
 		int n = sc.nextInt();
-		w = new int[n + 1];
-		x = new int[n + 1];
+		w = new int[n];
+		x = new int[n];
 		int total = 0;
 		System.out.println("Enter " + n + " Elements :");
-		for (int i = 1; i < n + 1; i++) {
+		for (int i = 0; i < n; i++) {
 			w[i] = sc.nextInt();
 			total += w[i];
 		}
@@ -30,7 +30,7 @@ public class SumOfSubsets {
 			System.out.println("Not possible to obtain the subset!!!");
 			System.exit(1);
 		}
-		subset(0, 1, total);
+		subset(0, 0, total);
 	}
 
 	private void subset(int s, int k, int r) {
@@ -38,7 +38,7 @@ public class SumOfSubsets {
 		x[k] = 1;
 		if (s + w[k] == sum) {
 			System.out.println();
-			for (int i = 1; i <= k; i++) {
+			for (int i = 0; i <= k; i++) {
 				System.out.print("\t" + x[i]);
 			}
 		} else if ((s + w[k] + w[k + 1]) <= sum) {

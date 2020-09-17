@@ -13,15 +13,16 @@ public class wordbreak {
 		for(int i = 1; i <= str.length(); i++) {
 			String substr = str.substring(0, i);
 			System.out.println("substr "+ substr);
-			boolean isPresent = isPresent(substr);
+//			boolean isPresent = isPresent(substr);
 			
-			if(isPresent) {
-				boolean result = this.wordbreak(str.substring(i));
-				System.out.println("result "+substr);
+			if(isPresent(substr)) {
+				return this.wordbreak(str.substring(i));
+//				boolean result = this.wordbreak(str.substring(i));
+//				System.out.println("result "+substr);
 				
-				if(result) {
-					return true;
-				}
+//				if(result) {
+//					return true;
+//				}
 			}
 		}
 		

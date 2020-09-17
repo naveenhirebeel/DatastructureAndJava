@@ -61,31 +61,7 @@ public class NQueens2DArray {
 		}
 		return false;
 	}
-	private static boolean isSafe(int board[][], int row, int col) {
-
-		// Check Left Upper Diagonal
-		for (int i = row - 1, j = col - 1; i >= 0 && j >= 0; i--, j--) {
-			if (board[i][j] == 1) {
-				return false;
-			}
-		}
-
-		// Check Right Upper Diagonal
-		for (int i = row - 1, j = col + 1; i >= 0 && j < board.length; i--, j++) {
-			if (board[i][j] == 1) {
-				return false;
-			}
-		}
-
-		// Check in same Column
-		for (int i = row - 1; i >= 0; i--) {
-			if (board[i][col] == 1) {
-				return false;
-			}
-		}
-
-		return true;
-	}
+	private static boolean isSafe(int board[][], int row, int col) {-+}
 
 	private static void printBoard(int[][] board) {
 		for (int row = 0; row < board.length; row++) {
